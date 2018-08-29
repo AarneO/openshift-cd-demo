@@ -201,7 +201,7 @@ objects:
                           openshift.selector('dc', 'tasks').delete()
                           openshift.selector('svc', 'tasks').delete()
                           openshift.selector('route', 'tasks').delete()
-                          openshift.selector('dc', 'tasks').autoscale.delete()
+                          openshift.selector('hpa', 'tasks').delete()
                         }
 
                         openshift.newApp("tasks:${version}").narrow("svc").expose()
